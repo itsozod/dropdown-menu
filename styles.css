@@ -1,0 +1,106 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    background-color: bisque;
+    min-height: 100vh;
+}
+.header {
+    background-color: brown;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 66px;
+    position: absolute;
+}
+.header .logo {
+    padding: 20px;
+}
+.menu .links {
+    display: flex;
+}
+.menu .links li {
+    padding: 10px 30px;
+    list-style-type: none;
+    font-size: 18px;
+    position: relative;
+}
+.menu .links li a {
+    color: #fff;
+    text-decoration: none;
+}
+.menu .links li a:hover {
+    color: lightseagreen;
+}
+.fas.fa-caret-down {
+    font-size: 17px;
+}
+.fas.fa-caret-up {
+    display: none;
+    font-size: 17px;
+}
+.dropdown-menu {
+    display: none;
+}
+.dropdown-menu.active {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: brown;
+}
+.dropdown-menu ul li {
+    list-style-type: none;
+}
+.drop.active {
+    color: aquamarine;
+}
+.lines {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    cursor: pointer;
+    display: none;
+}
+.line1, .line2, .line3{
+    background-color: white;
+    width: 30px;
+    height: 5px;
+    margin: 3px;
+    transition: 0.3s;
+}
+.line1.active {
+    transform: translateY(10px) rotate(235deg);
+}
+.line3.active {
+    transform: translateY(-12px) rotate(-230deg);
+}
+
+ @media screen and (max-width: 900px) {
+    .menu  {
+        position: absolute;
+        top: 76px;
+        width: 100%;
+        background-color: lightsalmon;
+        display: initial;
+        display: none;
+    }
+    .menu .links {
+        display: flex;
+        flex-direction: column;
+    }
+    .lines {
+        display: flex;
+    }
+    .dropdown-menu.active {
+        position: relative;
+        background-color: lightsalmon;
+    }
+} 
+
+  
